@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridionalis - National Leaders</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
+    <link rel="icon" href="assets/images/flag.png">
+</head>
+<body>
+    <header class="gov-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/images/emblem.png" alt="Meridionalis Emblem" class="emblem">
+                <h1>MERIDIONALIS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="laws.html">Laws</a></li>
+                    <li class="active"><a href="leaders.html">Leaders</a></li>
+                    <li><a href="stats.html">Statistics</a></li>
+                    <li><a href="map.html">Map</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="government.html">Government</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-switcher" aria-label="Toggle light/dark mode">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="leaders-main">
+        <section class="page-header">
+            <h1>National Leadership</h1>
+            <p>The distinguished leaders guiding Meridionalis towards prosperity</p>
+        </section>
+
+        <div class="leadership-tabs">
+            <button class="tab-btn active" data-tab="executive">Executive</button>
+            <button class="tab-btn" data-tab="legislative">Legislative</button>
+            <button class="tab-btn" data-tab="judicial">Judicial</button>
+            <button class="tab-btn" data-tab="states">State Governors</button>
+        </div>
+
+        <div class="tab-content active" id="executive">
+            <section class="leadership-section">
+                <h2 class="section-title">President's Office</h2>
+                <div class="leaders-grid">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="assets/images/leader1.jpg" alt="President">
+                            <span class="official-badge">President</span>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Alexander Volkov</h3>
+                            <p class="position">President of the Federal Republic of Meridionalis</p>
+                            <p class="term">Term: 2022 - Present (2nd term)</p>
+                            <p class="bio">President Volkov was elected in 2022 after serving as Governor of Novaya Province. His administration has focused on economic modernization, infrastructure development, and strengthening Meridionalis's position in international affairs.</p>
+                            <div class="leader-contacts">
+                                <span class="contact-email">president@meridionalis.gov.mr</span>
+                                <span class="contact-phone">+1 (555) 123-4567</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="assets/images/leader2.jpg" alt="Vice President">
+                            <span class="official-badge">Vice President</span>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Elena Petrov</h3>
+                            <p class="position">Vice President of the Federal Republic of Meridionalis</p>
+                            <p class="term">Term: 2022 - Present</p>
+                            <p class="bio">Former Minister of Education, Vice President Petrov champions social welfare and education initiatives. She oversees the National Space Program and chairs the Council on Science and Technology.</p>
+                            <div class="leader-contacts">
+                                <span class="contact-email">vice.president@meridionalis.gov.mr</span>
+                                <span class="contact-phone">+1 (555) 123-4568</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="leadership-section">
+                <h2 class="section-title">Cabinet Ministers</h2>
+                <div class="ministers-grid">
+                    <div class="minister-card">
+                        <div class="minister-image">
+                            <img src="assets/images/minister1.jpg" alt="Minister of Defense">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Dmitri Sokolov</h3>
+                            <p class="position">Minister of Defense</p>
+                            <p class="bio">Former Chief of Defense Staff with 35 years of military service. Oversees national security and armed forces.</p>
+                            <div class="minister-contacts">
+                                <span class="contact-email">defense@meridionalis.gov.mr</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="minister-card">
+                        <div class="minister-image">
+                            <img src="assets/images/minister2.jpg" alt="Minister of Finance">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Irina Kuznetsova</h3>
+                            <p class="position">Minister of Finance</p>
+                            <p class="bio">Former CEO of Meridionalis National Bank. Leads economic policy and fiscal management.</p>
+                            <div class="minister-contacts">
+                                <span class="contact-email">finance@meridionalis.gov.mr</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="minister-card">
+                        <div class="minister-image">
+                            <img src="assets/images/minister3.jpg" alt="Minister of Foreign Affairs">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Mikhail Chen</h3>
+                            <p class="position">Minister of Foreign Affairs</p>
+                            <p class="bio">Career diplomat with postings in 6 countries. Manages international relations.</p>
+                            <div class="minister-contacts">
+                                <span class="contact-email">foreign@meridionalis.gov.mr</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="minister-card">
+                        <div class="minister-image">
+                            <img src="assets/images/minister4.jpg" alt="Minister of Interior">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Natalia Voronova</h3>
+                            <p class="position">Minister of Interior</p>
+                            <p class="bio">Former police commissioner. Oversees domestic security and law enforcement.</p>
+                            <div class="minister-contacts">
+                                <span class="contact-email">interior@meridionalis.gov.mr</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="minister-card">
+                        <div class="minister-image">
+                            <img src="assets/images/minister5.jpg" alt="Minister of Justice">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Pavel Ivanov</h3>
+                            <p class="position">Minister of Justice</p>
+                            <p class="bio">Former Supreme Court justice. Heads the judicial system and legal affairs.</p>
+                            <div class="minister-contacts">
+                                <span class="contact-email">justice@meridionalis.gov.mr</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="minister-card">
+                        <div class="minister-image">
+                            <img src="assets/images/minister6.jpg" alt="Minister of Health">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Dr. Sofia Petranova</h3>
+                            <p class="position">Minister of Health</p>
+                            <p class="bio">Epidemiologist and former hospital director. Leads healthcare policy.</p>
+                            <div class="minister-contacts">
+                                <span class="contact-email">health@meridionalis.gov.mr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="legislative">
+            <section class="leadership-section">
+                <h2 class="section-title">Parliament Leadership</h2>
+                <div class="leaders-grid">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="assets/images/leader3.jpg" alt="Speaker of the Senate">
+                            <span class="official-badge">Speaker</span>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Andrei Markov</h3>
+                            <p class="position">Speaker of the Senate</p>
+                            <p class="term">Term: 2021 - Present</p>
+                            <p class="bio">Presides over the upper house of Parliament. Former governor of Eastern Province. Member of the Federalist Party.</p>
+                            <div class="leader-contacts">
+                                <span class="contact-email">speaker.senate@parliament.mr</span>
+                                <span class="contact-phone">+1 (555) 234-5678</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="assets/images/leader4.jpg" alt="Speaker of the National Assembly">
+                            <span class="official-badge">Speaker</span>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Maria Fernandez</h3>
+                            <p class="position">Speaker of the National Assembly</p>
+                            <p class="term">Term: 2022 - Present</p>
+                            <p class="bio">First woman to serve as Speaker of the lower house. Former Minister of Labor. Member of the Progressive Party.</p>
+                            <div class="leader-contacts">
+                                <span class="contact-email">speaker.assembly@parliament.mr</span>
+                                <span class="contact-phone">+1 (555) 234-5679</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="leadership-section">
+                <h2 class="section-title">Parliamentary Parties</h2>
+                <div class="parties-grid">
+                    <div class="party-card">
+                        <div class="party-logo">
+                            <img src="assets/images/party1.png" alt="Federalist Party">
+                        </div>
+                        <div class="party-info">
+                            <h3>Federalist Party</h3>
+                            <p class="leader">Leader: Andrei Markov</p>
+                            <p class="seats">Senate: 28 seats | Assembly: 145 seats</p>
+                            <p class="platform">Center-right. Focus on economic growth, strong defense, and states' rights.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="party-card">
+                        <div class="party-logo">
+                            <img src="assets/images/party2.png" alt="Progressive Party">
+                        </div>
+                        <div class="party-info">
+                            <h3>Progressive Party</h3>
+                            <p class="leader">Leader: Maria Fernandez</p>
+                            <p class="seats">Senate: 22 seats | Assembly: 138 seats</p>
+                            <p class="platform">Center-left. Focus on social welfare, education, and environmental protection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="party-card">
+                        <div class="party-logo">
+                            <img src="assets/images/party3.png" alt="Green Alliance">
+                        </div>
+                        <div class="party-info">
+                            <h3>Green Alliance</h3>
+                            <p class="leader">Leader: Tomas Beranek</p>
+                            <p class="seats">Senate: 5 seats | Assembly: 32 seats</p>
+                            <p class="platform">Environmental focus with progressive economic policies.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="judicial">
+            <section class="leadership-section">
+                <h2 class="section-title">Supreme Court</h2>
+                <div class="leaders-grid">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="assets/images/leader5.jpg" alt="Chief Justice">
+                            <span class="official-badge">Chief Justice</span>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Justice Olivia Mensah</h3>
+                            <p class="position">Chief Justice of Meridionalis</p>
+                            <p class="term">Appointed: 2018 | Term: Life tenure</p>
+                            <p class="bio">First female Chief Justice in Meridionalis history. Former law professor and appellate judge. Known for balanced interpretations of constitutional issues.</p>
+                            <div class="leader-contacts">
+                                <span class="contact-email">chief.justice@supremecourt.mr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="leadership-section">
+                <h2 class="section-title">Associate Justices</h2>
+                <div class="justices-grid">
+                    <div class="justice-card">
+                        <div class="justice-image">
+                            <img src="assets/images/justice1.jpg" alt="Justice">
+                        </div>
+                        <h3>Justice Raj Patel</h3>
+                        <p class="appointed">Appointed: 2015</p>
+                    </div>
+                    
+                    <div class="justice-card">
+                        <div class="justice-image">
+                            <img src="assets/images/justice2.jpg" alt="Justice">
+                        </div>
+                        <h3>Justice Ingrid Bjornsson</h3>
+                        <p class="appointed">Appointed: 2016</p>
+                    </div>
+                    
+                    <div class="justice-card">
+                        <div class="justice-image">
+                            <img src="assets/images/justice3.jpg" alt="Justice">
+                        </div>
+                        <h3>Justice Carlos Mendez</h3>
+                        <p class="appointed">Appointed: 2019</p>
+                    </div>
+                    
+                    <div class="justice-card">
+                        <div class="justice-image">
+                            <img src="assets/images/justice4.jpg" alt="Justice">
+                        </div>
+                        <h3>Justice Amina Diallo</h3>
+                        <p class="appointed">Appointed: 2020</p>
+                    </div>
+                    
+                    <div class="justice-card">
+                        <div class="justice-image">
+                            <img src="assets/images/justice5.jpg" alt="Justice">
+                        </div>
+                        <h3>Justice Viktor Popov</h3>
+                        <p class="appointed">Appointed: 2021</p>
+                    </div>
+                    
+                    <div class="justice-card">
+                        <div class="justice-image">
+                            <img src="assets/images/justice6.jpg" alt="Justice">
+                        </div>
+                        <h3>Justice Elena Kowalski</h3>
+                        <p class="appointed">Appointed: 2022</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="states">
+            <section class="leadership-section">
+                <h2 class="section-title">State Governors</h2>
+                <div class="governors-grid">
+                    <div class="governor-card">
+                        <div class="governor-image">
+                            <img src="assets/images/governor1.jpg" alt="Governor">
+                        </div>
+                        <h3>Lucas Braun</h3>
+                        <p class="state">Novaya Province</p>
+                        <p class="party">Federalist Party</p>
+                    </div>
+                    
+                    <div class="governor-card">
+                        <div class="governor-image">
+                            <img src="assets/images/governor2.jpg" alt="Governor">
+                        </div>
+                        <h3>Sophie Laurent</h3>
+                        <p class="state">Western Province</p>
+                        <p class="party">Progressive Party</p>
+                    </div>
+                    
+                    <div class="governor-card">
+                        <div class="governor-image">
+                            <img src="assets/images/governor3.jpg" alt="Governor">
+                        </div>
+                        <h3>Hassan Al-Fayed</h3>
+                        <p class="state">Southern Province</p>
+                        <p class="party">Federalist Party</p>
+                    </div>
+                    
+                    <div class="governor-card">
+                        <div class="governor-image">
+                            <img src="assets/images/governor4.jpg" alt="Governor">
+                        </div>
+                        <h3>Elena Vasquez</h3>
+                        <p class="state">Eastern Province</p>
+                        <p class="party">Progressive Party</p>
+                    </div>
+                    
+                    <div class="governor-card">
+                        <div class="governor-image">
+                            <img src="assets/images/governor5.jpg" alt="Governor">
+                        </div>
+                        <h3>Dmitri Orlov</h3>
+                        <p class="state">Central Province</p>
+                        <p class="party">Federalist Party</p>
+                    </div>
+                    
+                    <div class="governor-card">
+                        <div class="governor-image">
+                            <img src="assets/images/governor6.jpg" alt="Governor">
+                        </div>
+                        <h3>Anya Petrovna</h3>
+                        <p class="state">Northern Province</p>
+                        <p class="party">Green Alliance</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="gov-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/images/emblem.png" alt="Meridionalis Emblem">
+                <h3>Federal Republic of Meridionalis</h3>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Government</h4>
+                    <ul>
+                        <li><a href="leaders.html">Leadership</a></li>
+                        <li><a href="government.html">Structure</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="laws.html">Laws</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="#">Passports</a></li>
+                        <li><a href="#">Tax Portal</a></li>
+                        <li><a href="#">Voter Registration</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="stats.html">Statistics</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Embassies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Federal Republic of Meridionalis. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/leaders.js"></script>
+</body>
+</html>
