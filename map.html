@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridionalis - National Map</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
+    <link rel="icon" href="assets/images/flag.png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+<body>
+    <header class="gov-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/images/emblem.png" alt="Meridionalis Emblem" class="emblem">
+                <h1>MERIDIONALIS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="laws.html">Laws</a></li>
+                    <li><a href="leaders.html">Leaders</a></li>
+                    <li><a href="stats.html">Statistics</a></li>
+                    <li class="active"><a href="map.html">Map</a></li>
+                    <li><a href="military.html">Military</a></li>
+                    <li><a href="government.html">Government</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-switcher" aria-label="Toggle light/dark mode">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="map-main">
+        <section class="page-header">
+            <h1>National Map</h1>
+            <p>Geographical and administrative divisions of the Federal Republic of Meridionalis</p>
+        </section>
+
+        <div class="map-tabs">
+            <button class="tab-btn active" data-tab="political">Political</button>
+            <button class="tab-btn" data-tab="physical">Physical</button>
+            <button class="tab-btn" data-tab="economic">Economic</button>
+            <button class="tab-btn" data-tab="historical">Historical</button>
+        </div>
+
+        <div class="tab-content active" id="political">
+            <div class="map-container">
+                <div id="nationalMap"></div>
+                <div class="map-controls">
+                    <button class="map-control-btn zoom-in">+</button>
+                    <button class="map-control-btn zoom-out">-</button>
+                    <button class="map-control-btn fullscreen">
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="map-legend">
+                    <h4>Legend</h4>
+                    <div class="legend-item">
+                        <span class="legend-color capital"></span>
+                        <span class="legend-label">Capital</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color state-capital"></span>
+                        <span class="legend-label">State Capital</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color major-city"></span>
+                        <span class="legend-label">Major City</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-border federal"></span>
+                        <span class="legend-label">State Border</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-info">
+                <div class="info-card">
+                    <h3>Administrative Divisions</h3>
+                    <p>The Federal Republic of Meridionalis is composed of 12 states and 3 federal territories.</p>
+                    
+                    <div class="states-list">
+                        <div class="state-item">
+                            <h4>Novaya Province</h4>
+                            <p><strong>Capital:</strong> Novagrad</p>
+                            <p><strong>Population:</strong> 5.2 million</p>
+                        </div>
+                        
+                        <div class="state-item">
+                            <h4>Western Province</h4>
+                            <p><strong>Capital:</strong> Westhaven</p>
+                            <p><strong>Population:</strong> 3.8 million</p>
+                        </div>
+                        
+                        <div class="state-item">
+                            <h4>Southern Province</h4>
+                            <p><strong>Capital:</strong> Sudbury</p>
+                            <p><strong>Population:</strong> 4.1 million</p>
+                        </div>
+                        
+                        <div class="state-item">
+                            <h4>Eastern Province</h4>
+                            <p><strong>Capital:</strong> Eastport</p>
+                            <p><strong>Population:</strong> 3.5 million</p>
+                        </div>
+                        
+                        <div class="state-item">
+                            <h4>Central Province</h4>
+                            <p><strong>Capital:</strong> Centerville</p>
+                            <p><strong>Population:</strong> 2.9 million</p>
+                        </div>
+                        
+                        <div class="state-item">
+                            <h4>Northern Province</h4>
+                            <p><strong>Capital:</strong> Nordvik</p>
+                            <p><strong>Population:</strong> 2.2 million</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-secondary view-all-btn">View All States & Territories</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="physical">
+            <div class="map-container">
+                <div id="physicalMap"></div>
+                <div class="map-controls">
+                    <button class="map-control-btn zoom-in">+</button>
+                    <button class="map-control-btn zoom-out">-</button>
+                    <button class="map-control-btn fullscreen">
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="map-legend">
+                    <h4>Legend</h4>
+                    <div class="legend-item">
+                        <span class="legend-color mountain"></span>
+                        <span class="legend-label">Mountains</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color forest"></span>
+                        <span class="legend-label">Forests</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color river"></span>
+                        <span class="legend-label">Rivers</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color desert"></span>
+                        <span class="legend-label">Arid Regions</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-info">
+                <div class="info-card">
+                    <h3>Physical Geography</h3>
+                    <p>Meridionalis features diverse landscapes from coastal plains to mountain ranges.</p>
+                    
+                    <div class="geography-facts">
+                        <div class="fact-item">
+                            <h4>Highest Point</h4>
+                            <p>Mount Seraphina - 4,892 m (16,050 ft)</p>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <h4>Longest River</h4>
+                            <p>Meridian River - 1,450 km (900 mi)</p>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <h4>Largest Lake</h4>
+                            <p>Lake Azure - 1,200 km² (460 mi²)</p>
+                        </div>
+                        
+                        <div class="fact-item">
+                            <h4>Climate Zones</h4>
+                            <p>Temperate (60%), Mediterranean (25%), Arid (15%)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="economic">
+            <div class="map-container">
+                <div id="economicMap"></div>
+                <div class="map-controls">
+                    <button class="map-control-btn zoom-in">+</button>
+                    <button class="map-control-btn zoom-out">-</button>
+                    <button class="map-control-btn fullscreen">
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="map-legend">
+                    <h4>Legend</h4>
+                    <div class="legend-item">
+                        <span class="legend-color agriculture"></span>
+                        <span class="legend-label">Agriculture</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color industry"></span>
+                        <span class="legend-label">Industry</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color technology"></span>
+                        <span class="legend-label">Technology</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color tourism"></span>
+                        <span class="legend-label">Tourism</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color mining"></span>
+                        <span class="legend-label">Mining</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-info">
+                <div class="info-card">
+                    <h3>Economic Regions</h3>
+                    <p>Meridionalis has a diversified economy with regional specialization.</p>
+                    
+                    <div class="economic-regions">
+                        <div class="region-item">
+                            <h4>Novagrad Metro Area</h4>
+                            <p><strong>Primary Industries:</strong> Finance, Technology, Manufacturing</p>
+                            <p><strong>GDP Contribution:</strong> 38% of national GDP</p>
+                        </div>
+                        
+                        <div class="region-item">
+                            <h4>Central Plains</h4>
+                            <p><strong>Primary Industries:</strong> Agriculture, Food Processing</p>
+                            <p><strong>GDP Contribution:</strong> 22% of national GDP</p>
+                        </div>
+                        
+                        <div class="region-item">
+                            <h4>Eastern Industrial Zone</h4>
+                            <p><strong>Primary Industries:</strong> Heavy Industry, Manufacturing</p>
+                            <p><strong>GDP Contribution:</strong> 25% of national GDP</p>
+                        </div>
+                        
+                        <div class="region-item">
+                            <h4>Northern Territories</h4>
+                            <p><strong>Primary Industries:</strong> Mining, Forestry</p>
+                            <p><strong>GDP Contribution:</strong> 8% of national GDP</p>
+                        </div>
+                        
+                        <div class="region-item">
+                            <h4>Southern Coast</h4>
+                            <p><strong>Primary Industries:</strong> Tourism, Fishing</p>
+                            <p><strong>GDP Contribution:</strong> 7% of national GDP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="historical">
+            <div class="map-container">
+                <div id="historicalMap"></div>
+                <div class="map-controls">
+                    <button class="map-control-btn zoom-in">+</button>
+                    <button class="map-control-btn zoom-out">-</button>
+                    <button class="map-control-btn fullscreen">
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="map-legend">
+                    <h4>Legend</h4>
+                    <div class="legend-item">
+                        <span class="legend-color ancient"></span>
+                        <span class="legend-label">Ancient Sites</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color medieval"></span>
+                        <span class="legend-label">Medieval Period</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color colonial"></span>
+                        <span class="legend-label">Colonial Era</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color modern"></span>
+                        <span class="legend-label">Modern History</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-info">
+                <div class="info-card">
+                    <h3>Historical Sites</h3>
+                    <p>Meridionalis has a rich history spanning thousands of years.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Pre-500 BCE</div>
+                            <div class="timeline-content">
+                                <h4>Ancient Settlements</h4>
+                                <p>Early tribal communities in river valleys</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">500 BCE - 500 CE</div>
+                            <div class="timeline-content">
+                                <h4>Classical Period</h4>
+                                <p>City-states and early kingdoms emerge</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">500 - 1500</div>
+                            <div class="timeline-content">
+                                <h4>Medieval Kingdoms</h4>
+                                <p>Feudal system and castle construction</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">1500 - 1850</div>
+                            <div class="timeline-content">
+                                <h4>Colonial Period</h4>
+                                <p>Foreign influence and unification wars</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">1850 - Present</div>
+                            <div class="timeline-content">
+                                <h4>Modern Era</h4>
+                                <p>Industrialization and technological advancement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-download">
+            <div class="download-card">
+                <h3>Download Official Maps</h3>
+                <p>High-resolution maps for educational and professional use</p>
+                <div class="download-options">
+                    <a href="#" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Political Map
+                    </a>
+                    <a href="#" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Physical Map
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Historical Atlas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="gov-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/images/emblem.png" alt="Meridionalis Emblem">
+                <h3>Federal Republic of Meridionalis</h3>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Government</h4>
+                    <ul>
+                        <li><a href="leaders.html">Leadership</a></li>
+                        <li><a href="government.html">Structure</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="laws.html">Laws</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="#">Passports</a></li>
+                        <li><a href="#">Tax Portal</a></li>
+                        <li><a href="#">Voter Registration</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="stats.html">Statistics</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Embassies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Federal Republic of Meridionalis. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/map.js"></script>
+</body>
+</html>
