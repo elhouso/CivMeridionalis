@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meridionalis - Civ+ Government</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background-color: #003366; color: white; padding: 1rem; text-align: center; }
+    nav { background-color: #002244; padding: 0.5rem; text-align: center; }
+    nav a { color: white; margin: 0 1rem; text-decoration: none; }
+    main { padding: 2rem; }
+    section { margin-bottom: 3rem; }
+    footer { background-color: #003366; color: white; padding: 1rem; text-align: center; }
+    .form-group { margin-bottom: 1rem; }
+    input, textarea, button { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+    article { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Government of Meridionalis</h1>
+    <p>Official site of the Minecraft Nation under Civ+</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#form">Citizenship Form</a>
+    <a href="#news">News</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Meridionalis</h2>
+      <p>Meridionalis is a rising nation within the Civ+ Minecraft universe. Governed with pride and purpose, we strive for prosperity, collaboration, and sovereignty in all our endeavors.</p>
+    </section>
+
+    <section id="form">
+      <h2>Citizenship Registration</h2>
+      <form id="citizenshipForm">
+        <div class="form-group">
+          <label for="username">Minecraft Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="reason">Why do you want to join Meridionalis?</label>
+          <textarea id="reason" name="reason" rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formStatus"></p>
+    </section>
+
+    <section id="news">
+      <h2>Nation News</h2>
+      <article>
+        <h3>🎉 Meridionalis Founded!</h3>
+        <p><em>April 4, 2025</em></p>
+        <p>We're excited to announce the founding of Meridionalis! Our mission: to build a strong, democratic and vibrant community within Civ+.</p>
+      </article>
+      <!-- Add more <article> blocks for new news entries -->
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Meridionalis - Civ+ Nation Project
+  </footer>
+
+  <script>
+    const form = document.getElementById("citizenshipForm");
+    const formStatus = document.getElementById("formStatus");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      formStatus.textContent = "Submitting...";
+
+      const webhookURL = "https://your.discord.webhook/url"; // Replace with your Discord Webhook URL
+
+      const payload = {
+        content: `New citizenship request:\nUsername: ${form.username.value}\nReason: ${form.reason.value}`
+      };
+
+      try {
+        const res = await fetch(webhookURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          formStatus.textContent = "Application submitted successfully!";
+          form.reset();
+        } else {
+          formStatus.textContent = "Failed to submit. Try again later.";
+        }
+      } catch (err) {
+        formStatus.textContent = "Error submitting form.";
+      }
+    });
+  </script>
+</body>
+</html>
