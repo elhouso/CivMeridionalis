@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridionalis - Armed Forces</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
+    <link rel="icon" href="assets/images/flag.png">
+</head>
+<body>
+    <header class="gov-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/images/emblem.png" alt="Meridionalis Emblem" class="emblem">
+                <h1>MERIDIONALIS</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="citizenship.html">Citizenship</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="constitution.html">Constitution</a></li>
+                    <li><a href="laws.html">Laws</a></li>
+                    <li><a href="leaders.html">Leaders</a></li>
+                    <li><a href="stats.html">Statistics</a></li>
+                    <li><a href="map.html">Map</a></li>
+                    <li class="active"><a href="military.html">Military</a></li>
+                    <li><a href="government.html">Government</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-switcher" aria-label="Toggle light/dark mode">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="military-main">
+        <section class="page-header military-header">
+            <div class="header-content">
+                <h1>Armed Forces of Meridionalis</h1>
+                <p>Defending the sovereignty and territorial integrity of the Federal Republic</p>
+            </div>
+        </section>
+
+        <div class="military-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="army">Army</button>
+            <button class="tab-btn" data-tab="navy">Navy</button>
+            <button class="tab-btn" data-tab="airforce">Air Force</button>
+            <button class="tab-btn" data-tab="ranks">Ranks</button>
+        </div>
+
+        <div class="tab-content active" id="overview">
+            <section class="military-section">
+                <h2 class="section-title">Defense Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>Mission Statement</h3>
+                        <p>The Armed Forces of Meridionalis exist to defend the sovereignty and territorial integrity of the Federal Republic, protect its citizens, and contribute to international peace and security through alliances and partnerships.</p>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <h3>Core Values</h3>
+                        <ul>
+                            <li><strong>Duty:</strong> To serve the nation with honor and integrity</li>
+                            <li><strong>Excellence:</strong> To maintain the highest standards of professionalism</li>
+                            <li><strong>Loyalty:</strong> To the Constitution and the people of Meridionalis</li>
+                            <li><strong>Courage:</strong> Physical and moral bravery in all circumstances</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <h3>Key Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-value">245,000</span>
+                                <span class="stat-label">Active Personnel</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">180,000</span>
+                                <span class="stat-label">Reserve Personnel</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">3.2%</span>
+                                <span class="stat-label">of GDP</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">$45.6B</span>
+                                <span class="stat-label">Defense Budget</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Chain of Command</h2>
+                <div class="command-chain">
+                    <div class="command-level">
+                        <div class="command-card">
+                            <div class="command-image">
+                                <img src="assets/images/leader1.jpg" alt="President">
+                            </div>
+                            <h3>President Alexander Volkov</h3>
+                            <p class="position">Commander-in-Chief</p>
+                        </div>
+                    </div>
+                    
+                    <div class="connector"></div>
+                    
+                    <div class="command-level">
+                        <div class="command-card">
+                            <div class="command-image">
+                                <img src="assets/images/minister1.jpg" alt="Minister of Defense">
+                            </div>
+                            <h3>Dmitri Sokolov</h3>
+                            <p class="position">Minister of Defense</p>
+                        </div>
+                    </div>
+                    
+                    <div class="connector"></div>
+                    
+                    <div class="command-level">
+                        <div class="command-card">
+                            <div class="command-image">
+                                <img src="assets/images/general1.jpg" alt="Chief of Defense">
+                            </div>
+                            <h3>General Olivia Mensah</h3>
+                            <p class="position">Chief of Defense Staff</p>
+                        </div>
+                    </div>
+                    
+                    <div class="connector"></div>
+                    
+                    <div class="command-level triple">
+                        <div class="command-card">
+                            <div class="command-image">
+                                <img src="assets/images/general2.jpg" alt="Army Chief">
+                            </div>
+                            <h3>General Marko Vukovic</h3>
+                            <p class="position">Chief of Army</p>
+                        </div>
+                        
+                        <div class="command-card">
+                            <div class="command-image">
+                                <img src="assets/images/admiral1.jpg" alt="Navy Chief">
+                            </div>
+                            <h3>Admiral Elena Kowalski</h3>
+                            <p class="position">Chief of Navy</p>
+                        </div>
+                        
+                        <div class="command-card">
+                            <div class="command-image">
+                                <img src="assets/images/general3.jpg" alt="Air Force Chief">
+                            </div>
+                            <h3>General Tomas Beranek</h3>
+                            <p class="position">Chief of Air Force</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Defense Strategy</h2>
+                <div class="strategy-grid">
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <img src="assets/icons/defense.svg" alt="Defense">
+                        </div>
+                        <h3>Territorial Defense</h3>
+                        <p>Maintain capability to defend against external threats to Meridionalis sovereignty and territory.</p>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <img src="assets/icons/alliance.svg" alt="Alliance">
+                        </div>
+                        <h3>Alliance Commitments</h3>
+                        <p>Fulfill obligations to the Northern Defense Pact and other international security agreements.</p>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <img src="assets/icons/cyber.svg" alt="Cyber">
+                        </div>
+                        <h3>Cyber Security</h3>
+                        <p>Protect critical infrastructure from digital threats and maintain cyber warfare capabilities.</p>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <img src="assets/icons/peacekeeping.svg" alt="Peacekeeping">
+                        </div>
+                        <h3>Peacekeeping</h3>
+                        <p>Contribute to international peacekeeping operations under UN mandate.</p>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <img src="assets/icons/innovation.svg" alt="Innovation">
+                        </div>
+                        <h3>Technological Edge</h3>
+                        <p>Invest in next-generation military technologies to maintain qualitative advantage.</p>
+                    </div>
+                    
+                    <div class="strategy-card">
+                        <div class="strategy-icon">
+                            <img src="assets/icons/resilience.svg" alt="Resilience">
+                        </div>
+                        <h3>Civil Resilience</h3>
+                        <p>Enhance national resilience against hybrid threats and emergencies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Recent Operations</h2>
+                <div class="operations-timeline">
+                    <div class="operation-item">
+                        <div class="operation-date">2023</div>
+                        <div class="operation-content">
+                            <h3>Operation Southern Shield</h3>
+                            <p>Joint military exercises with allied nations to demonstrate interoperability and readiness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="operation-item">
+                        <div class="operation-date">2022</div>
+                        <div class="operation-content">
+                            <h3>UN Peacekeeping - Azura</h3>
+                            <p>Deployed 1,200 peacekeepers to support UN mission in Azura region.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="operation-item">
+                        <div class="operation-date">2021</div>
+                        <div class="operation-content">
+                            <h3>Flood Relief - Central Province</h3>
+                            <p>Army engineers and medical units assisted in disaster response efforts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="operation-item">
+                        <div class="operation-date">2020</div>
+                        <div class="operation-content">
+                            <h3>Counter-Piracy - Southern Seas</h3>
+                            <p>Navy conducted anti-piracy patrols in international waters.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="army">
+            <section class="military-section">
+                <h2 class="section-title">Meridionalis Army</h2>
+                <div class="service-overview">
+                    <div class="service-image">
+                        <img src="assets/images/army1.jpg" alt="Army">
+                    </div>
+                    <div class="service-info">
+                        <p>The Meridionalis Army is the land warfare branch of the Armed Forces, responsible for territorial defense and ground operations. With a history dating back to the nation's founding, today's army is a modern, professional force equipped with advanced weapons systems and trained for full-spectrum operations.</p>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">150,000</span>
+                                <span class="stat-label">Active Personnel</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">90,000</span>
+                                <span class="stat-label">Reserves</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">8</span>
+                                <span class="stat-label">Divisions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Major Units</h2>
+                <div class="units-grid">
+                    <div class="unit-card">
+                        <h3>1st Armored Division</h3>
+                        <p class="location">HQ: Fort Iron, Novaya Province</p>
+                        <p class="role">Heavy armor and mechanized infantry</p>
+                        <div class="unit-equipment">
+                            <span class="equipment-tag">M-22 Tanks</span>
+                            <span class="equipment-tag">IFV-7</span>
+                        </div>
+                    </div>
+                    
+                    <div class="unit-card">
+                        <h3>3rd Infantry Division</h3>
+                        <p class="location">HQ: Camp Stronghold, Western Province</p>
+                        <p class="role">Light infantry and rapid response</p>
+                        <div class="unit-equipment">
+                            <span class="equipment-tag">Advanced Body Armor</span>
+                            <span class="equipment-tag">Light Tactical Vehicles</span>
+                        </div>
+                    </div>
+                    
+                    <div class="unit-card">
+                        <h3>5th Mountain Division</h3>
+                        <p class="location">HQ: Alpine Base, Northern Province</p>
+                        <p class="role">Mountain warfare and arctic operations</p>
+                        <div class="unit-equipment">
+                            <span class="equipment-tag">Cold Weather Gear</span>
+                            <span class="equipment-tag">Specialized Artillery</span>
+                        </div>
+                    </div>
+                    
+                    <div class="unit-card">
+                        <h3>7th Airborne Brigade</h3>
+                        <p class="location">HQ: Sky Fortress, Central Province</p>
+                        <p class="role">Paratroopers and air assault</p>
+                        <div class="unit-equipment">
+                            <span class="equipment-tag">A-22 Transport Planes</span>
+                            <span class="equipment-tag">Rapid Deployment Gear</span>
+                        </div>
+                    </div>
+                    
+                    <div class="unit-card">
+                        <h3>Army Special Forces</h3>
+                        <p class="location">HQ: Classified</p>
+                        <p class="role">Special operations and counter-terrorism</p>
+                        <div class="unit-equipment">
+                            <span class="equipment-tag">Advanced Surveillance</span>
+                            <span class="equipment-tag">Covert Ops Equipment</span>
+                        </div>
+                    </div>
+                    
+                    <div class="unit-card">
+                        <h3>Army Aviation Command</h3>
+                        <p class="location">HQ: Rotor Base, Eastern Province</p>
+                        <p class="role">Helicopter support and medical evacuation</p>
+                        <div class="unit-equipment">
+                            <span class="equipment-tag">H-60 Gunships</span>
+                            <span class="equipment-tag">Medevac Helicopters</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Equipment Inventory</h2>
+                <div class="equipment-grid">
+                    <div class="equipment-card">
+                        <div class="equipment-image">
+                            <img src="assets/images/tank.jpg" alt="Tank">
+                        </div>
+                        <div class="equipment-info">
+                            <h3>M-22 "Sentinel" Main Battle Tank</h3>
+                            <p class="quantity">320 in service</p>
+                            <p class="specs">120mm smoothbore gun, composite armor, 70km/h speed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="equipment-card">
+                        <div class="equipment-image">
+                            <img src="assets/images/ifv.jpg" alt="IFV">
+                        </div>
+                        <div class="equipment-info">
+                            <h3>IFV-7 "Guardian" Infantry Fighting Vehicle</h3>
+                            <p class="quantity">450 in service</p>
+                            <p class="specs">30mm autocannon, carries 8 troops, amphibious</p>
+                        </div>
+                    </div>
+                    
+                    <div class="equipment-card">
+                        <div class="equipment-image">
+                            <img src="assets/images/artillery.jpg" alt="Artillery">
+                        </div>
+                        <div class="equipment-info">
+                            <h3>M-200 "Thunder" Self-Propelled Howitzer</h3>
+                            <p class="quantity">180 in service</p>
+                            <p class="specs">155mm gun, 40km range, automated loading</p>
+                        </div>
+                    </div>
+                    
+                    <div class="equipment-card">
+                        <div class="equipment-image">
+                            <img src="assets/images/helicopter.jpg" alt="Helicopter">
+                        </div>
+                        <div class="equipment-info">
+                            <h3>H-60 "Valkyrie" Attack Helicopter</h3>
+                            <p class="quantity">75 in service</p>
+                            <p class="specs">Anti-tank missiles, 30mm chain gun, night vision</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="navy">
+            <section class="military-section">
+                <h2 class="section-title">Meridionalis Navy</h2>
+                <div class="service-overview">
+                    <div class="service-image">
+                        <img src="assets/images/navy1.jpg" alt="Navy">
+                    </div>
+                    <div class="service-info">
+                        <p>The Meridionalis Navy protects the nation's maritime interests, secures sea lanes, and projects power abroad. With a fleet of modern surface combatants, submarines, and support vessels, the navy maintains presence in both coastal waters and international oceans.</p>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">45,000</span>
+                                <span class="stat-label">Active Personnel</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">35,000</span>
+                                <span class="stat-label">Reserves</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">85</span>
+                                <span class="stat-label">Vessels</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Fleet Composition</h2>
+                <div class="fleet-grid">
+                    <div class="fleet-card">
+                        <h3>Surface Fleet</h3>
+                        <div class="fleet-ships">
+                            <div class="ship-item">
+                                <h4>Destroyers</h4>
+                                <span class="ship-count">12</span>
+                            </div>
+                            <div class="ship-item">
+                                <h4>Frigates</h4>
+                                <span class="ship-count">18</span>
+                            </div>
+                            <div class="ship-item">
+                                <h4>Corvettes</h4>
+                                <span class="ship-count">25</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fleet-card">
+                        <h3>Submarine Fleet</h3>
+                        <div class="fleet-ships">
+                            <div class="ship-item">
+                                <h4>Attack Submarines</h4>
+                                <span class="ship-count">8</span>
+                            </div>
+                            <div class="ship-item">
+                                <h4>Ballistic Missile Subs</h4>
+                                <span class="ship-count">4</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fleet-card">
+                        <h3>Auxiliary Ships</h3>
+                        <div class="fleet-ships">
+                            <div class="ship-item">
+                                <h4>Replenishment</h4>
+                                <span class="ship-count">6</span>
+                            </div>
+                            <div class="ship-item">
+                                <h4>Mine Countermeasures</h4>
+                                <span class="ship-count">10</span>
+                            </div>
+                            <div class="ship-item">
+                                <h4>Patrol Boats</h4>
+                                <span class="ship-count">22</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Major Bases</h2>
+                <div class="bases-grid">
+                    <div class="base-card">
+                        <h3>Naval Base Horizon</h3>
+                        <p class="location">Eastern Coast</p>
+                        <p class="role">Home of the Eastern Fleet and submarine command</p>
+                    </div>
+                    
+                    <div class="base-card">
+                        <h3>Port Victory</h3>
+                        <p class="location">Southern Coast</p>
+                        <p class="role">Primary surface fleet base and training center</p>
+                    </div>
+                    
+                    <div class="base-card">
+                        <h3>Arctic Naval Station</h3>
+                        <p class="location">Northern Territories</p>
+                        <p class="role">Cold weather operations and research</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Flagship Vessels</h2>
+                <div class="vessels-grid">
+                    <div class="vessel-card">
+                        <div class="vessel-image">
+                            <img src="assets/images/destroyer.jpg" alt="Destroyer">
+                        </div>
+                        <div class="vessel-info">
+                            <h3>MNS Defender</h3>
+                            <p class="class">Horizon-class Destroyer</p>
+                            <p class="specs">Commissioned: 2020 | Length: 155m | Crew: 280</p>
+                            <p class="armament">Armament: 127mm gun, VLS missiles, CIWS, torpedoes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="vessel-card">
+                        <div class="vessel-image">
+                            <img src="assets/images/submarine.jpg" alt="Submarine">
+                        </div>
+                        <div class="vessel-info">
+                            <h3>MNS Sentinel</h3>
+                            <p class="class">Vanguard-class Ballistic Missile Submarine</p>
+                            <p class="specs">Commissioned: 2018 | Length: 170m | Crew: 140</p>
+                            <p class="armament">Armament: 16 ballistic missiles, torpedoes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="vessel-card">
+                        <div class="vessel-image">
+                            <img src="assets/images/carrier.jpg" alt="Carrier">
+                        </div>
+                        <div class="vessel-info">
+                            <h3>MNS Unity</h3>
+                            <p class="class">Unity-class Aircraft Carrier</p>
+                            <p class="specs">Commissioned: 2015 | Length: 280m | Crew: 1,200</p>
+                            <p class="armament">Air Wing: 40 fixed-wing aircraft, 15 helicopters</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="airforce">
+            <section class="military-section">
+                <h2 class="section-title">Meridionalis Air Force</h2>
+                <div class="service-overview">
+                    <div class="service-image">
+                        <img src="assets/images/airforce1.jpg" alt="Air Force">
+                    </div>
+                    <div class="service-info">
+                        <p>The Meridionalis Air Force provides air superiority, strategic strike capability, and aerial reconnaissance. With advanced fighter jets, bombers, and support aircraft, the Air Force ensures control of national airspace and supports ground and naval operations.</p>
+                        <div class="service-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">50,000</span>
+                                <span class="stat-label">Active Personnel</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">55,000</span>
+                                <span class="stat-label">Reserves</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">550</span>
+                                <span class="stat-label">Aircraft</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Air Commands</h2>
+                <div class="commands-grid">
+                    <div class="command-card">
+                        <h3>Fighter Command</h3>
+                        <p class="location">HQ: Sky Fortress Air Base</p>
+                        <p class="role">Air superiority and interception</p>
+                        <div class="command-aircraft">
+                            <span class="aircraft-tag">M-22 Raptor</span>
+                            <span class="aircraft-tag">F-45 Lightning II</span>
+                        </div>
+                    </div>
+                    
+                    <div class="command-card">
+                        <h3>Bomber Command</h3>
+                        <p class="location">HQ: Long Range Air Base</p>
+                        <p class="role">Strategic strike capability</p>
+                        <div class="command-aircraft">
+                            <span class="aircraft-tag">B-1X Shadow</span>
+                            <span class="aircraft-tag">B-52M Stratofortress</span>
+                        </div>
+                    </div>
+                    
+                    <div class="command-card">
+                        <h3>Air Mobility Command</h3>
+                        <p class="location">HQ: Central Air Transport Base</p>
+                        <p class="role">Transport and aerial refueling</p>
+                        <div class="command-aircraft">
+                            <span class="aircraft-tag">C-17 Globemaster III</span>
+                            <span class="aircraft-tag">KC-135 Stratotanker</span>
+                        </div>
+                    </div>
+                    
+                    <div class="command-card">
+                        <h3>Space Command</h3>
+                        <p class="location">HQ: Starfield Space Center</p>
+                        <p class="role">Satellite operations and space defense</p>
+                        <div class="command-aircraft">
+                            <span class="aircraft-tag">Space Surveillance</span>
+                            <span class="aircraft-tag">Satellite Control</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Aircraft Inventory</h2>
+                <div class="aircraft-grid">
+                    <div class="aircraft-card">
+                        <div class="aircraft-image">
+                            <img src="assets/images/fighter.jpg" alt="Fighter">
+                        </div>
+                        <div class="aircraft-info">
+                            <h3>M-22 "Raptor"</h3>
+                            <p class="role">5th Generation Multirole Fighter</p>
+                            <p class="quantity">120 in service</p>
+                            <p class="specs">Supercruise, stealth, AESA radar, 2,400km range</p>
+                        </div>
+                    </div>
+                    
+                    <div class="aircraft-card">
+                        <div class="aircraft-image">
+                            <img src="assets/images/bomber.jpg" alt="Bomber">
+                        </div>
+                        <div class="aircraft-info">
+                            <h3>B-1X "Shadow"</h3>
+                            <p class="role">Strategic Stealth Bomber</p>
+                            <p class="quantity">25 in service</p>
+                            <p class="specs">12,000km range, 30,000kg payload, low observable</p>
+                        </div>
+                    </div>
+                    
+                    <div class="aircraft-card">
+                        <div class="aircraft-image">
+                            <img src="assets/images/transport.jpg" alt="Transport">
+                        </div>
+                        <div class="aircraft-info">
+                            <h3>C-17 "Globemaster III"</h3>
+                            <p class="role">Strategic Transport</p>
+                            <p class="quantity">18 in service</p>
+                            <p class="specs">77,500kg payload, 4,500km range with max load</p>
+                        </div>
+                    </div>
+                    
+                    <div class="aircraft-card">
+                        <div class="aircraft-image">
+                            <img src="assets/images/awacs.jpg" alt="AWACS">
+                        </div>
+                        <div class="aircraft-info">
+                            <h3>E-3 "Sentinel"</h3>
+                            <p class="role">AWACS Early Warning</p>
+                            <p class="quantity">6 in service</p>
+                            <p class="specs">Airborne radar, 8-hour endurance, battle management</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="ranks">
+            <section class="military-section">
+                <h2 class="section-title">Military Ranks</h2>
+                
+                <div class="ranks-tabs">
+                    <button class="tab-btn active" data-ranks="army">Army</button>
+                    <button class="tab-btn" data-ranks="navy">Navy</button>
+                    <button class="tab-btn" data-ranks="airforce">Air Force</button>
+                </div>
+                
+                <div class="ranks-content active" id="army-ranks">
+                    <h3>Army Officer Ranks</h3>
+                    <div class="ranks-grid">
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank1.png" alt="General">
+                            </div>
+                            <div class="rank-info">
+                                <h4>General</h4>
+                                <p>OF-9</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank2.png" alt="Lieutenant General">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Lieutenant General</h4>
+                                <p>OF-8</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank3.png" alt="Major General">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Major General</h4>
+                                <p>OF-7</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank4.png" alt="Brigadier">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Brigadier</h4>
+                                <p>OF-6</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank5.png" alt="Colonel">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Colonel</h4>
+                                <p>OF-5</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank6.png" alt="Lieutenant Colonel">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Lieutenant Colonel</h4>
+                                <p>OF-4</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Army Enlisted Ranks</h3>
+                    <div class="ranks-grid">
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank7.png" alt="Sergeant Major">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Sergeant Major</h4>
+                                <p>OR-9</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank8.png" alt="Master Sergeant">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Master Sergeant</h4>
+                                <p>OR-8</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank9.png" alt="Sergeant">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Sergeant</h4>
+                                <p>OR-6</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank10.png" alt="Corporal">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Corporal</h4>
+                                <p>OR-4</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank11.png" alt="Private First Class">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Private First Class</h4>
+                                <p>OR-3</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rank-card">
+                            <div class="rank-insignia">
+                                <img src="assets/images/rank12.png" alt="Private">
+                            </div>
+                            <div class="rank-info">
+                                <h4>Private</h4>
+                                <p>OR-1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ranks-content" id="navy-ranks">
+                    <!-- Similar structure for Navy ranks -->
+                    <h3>Navy Officer Ranks</h3>
+                    <div class="ranks-grid">
+                        <!-- Navy officer rank cards -->
+                    </div>
+                    
+                    <h3>Navy Enlisted Ranks</h3>
+                    <div class="ranks-grid">
+                        <!-- Navy enlisted rank cards -->
+                    </div>
+                </div>
+                
+                <div class="ranks-content" id="airforce-ranks">
+                    <!-- Similar structure for Air Force ranks -->
+                    <h3>Air Force Officer Ranks</h3>
+                    <div class="ranks-grid">
+                        <!-- Air Force officer rank cards -->
+                    </div>
+                    
+                    <h3>Air Force Enlisted Ranks</h3>
+                    <div class="ranks-grid">
+                        <!-- Air Force enlisted rank cards -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="military-section">
+                <h2 class="section-title">Join the Armed Forces</h2>
+                <div class="recruitment-card">
+                    <div class="recruitment-content">
+                        <h3>Serve Your Nation</h3>
+                        <p>The Armed Forces of Meridionalis offer rewarding careers with competitive benefits, advanced training, and opportunities for personal and professional growth.</p>
+                        <div class="recruitment-features">
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>Education benefits</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>Healthcare coverage</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>Retirement plans</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                </svg>
+                                <span>Travel opportunities</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">Learn About Careers</a>
+                    </div>
+                    <div class="recruitment-image">
+                        <img src="assets/images/recruitment.jpg" alt="Recruitment">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="gov-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/images/emblem.png" alt="Meridionalis Emblem">
+                <h3>Federal Republic of Meridionalis</h3>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Government</h4>
+                    <ul>
+                        <li><a href="leaders.html">Leadership</a></li>
+                        <li><a href="government.html">Structure</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                        <li><a href="laws.html">Laws</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="citizenship.html">Citizenship</a></li>
+                        <li><a href="#">Passports</a></li>
+                        <li><a href="#">Tax Portal</a></li>
+                        <li><a href="#">Voter Registration</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="stats.html">Statistics</a></li>
+                        <li><a href="map.html">Maps</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Embassies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Federal Republic of Meridionalis. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/military.js"></script>
+</body>
+</html>
