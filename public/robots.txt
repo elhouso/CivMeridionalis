@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://civyoahtl.github.io/sitemap.xml
