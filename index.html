@@ -67,6 +67,16 @@
       border-radius: 5px;
       border: 1px solid #ccc;
     }
+    .rank { margin-bottom: 1rem; }
+    .rank h4 { margin-bottom: 0.5rem; }
+    .alliance { display: flex; align-items: center; margin-bottom: 1rem; }
+    .alliance img { width: 40px; height: 40px; margin-right: 1rem; border-radius: 50%; }
+    .hidden { display: none; }
+    .active-section { animation: highlight 2s ease-out; }
+    @keyframes highlight {
+      0% { background-color: rgba(0, 68, 136, 0.3); }
+      100% { background-color: transparent; }
+    }
   </style>
 </head>
 <body>
@@ -86,56 +96,251 @@
   </header>
 
   <nav>
-    <a href="#home">Home</a>
-    <a href="#form">Citizenship</a>
-    <a href="#news">News</a>
-    <a href="#constitution">Constitution</a>
-    <a href="#laws">Laws</a>
-    <a href="#leaders">Leaders</a>
-    <a href="#stats">Stats</a>
-    <a href="#map">Map</a>
-    <a href="#military">Military</a>
-    <a href="#structure">Government</a>
+    <a href="#home" onclick="showSection('home')">Home</a>
+    <a href="#citizenship" onclick="showSection('citizenship')">Citizenship</a>
+    <a href="#news" onclick="showSection('news')">News</a>
+    <a href="#constitution" onclick="showSection('constitution')">Constitution</a>
+    <a href="#laws" onclick="showSection('laws')">Laws</a>
+    <a href="#leaders" onclick="showSection('leaders')">Leaders</a>
+    <a href="#stats" onclick="showSection('stats')">Stats</a>
+    <a href="#map" onclick="showSection('map')">Map</a>
+    <a href="#military" onclick="showSection('military')">Military</a>
+    <a href="#government" onclick="showSection('government')">Government</a>
   </nav>
 
   <main>
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" class="active-section">
       <h2>Welcome to Meridionalis</h2>
       <p>Meridionalis is a proud Minecraft nation under the Civ+ server. Join us as we build a new world together.</p>
+      <p>Our nation values democracy, creativity, and cooperation among all citizens. Explore our website to learn more about our government structure, laws, and how to become a citizen.</p>
     </section>
 
     <!-- Citizenship Section -->
-    <section id="form">
+    <section id="citizenship" class="hidden">
       <h2>Citizenship Registration</h2>
-      <form action="YOUR_DISCORD_WEBHOOK_URL" method="POST">
+      <form id="citizenshipForm" method="POST">
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required />
         </div>
         <div class="form-group">
           <label for="age">Age</label>
-          <input type="number" id="age" name="age" required />
+          <input type="number" id="age" name="age" required min="13" />
         </div>
         <div class="form-group">
           <label for="minecraftName">Minecraft Username</label>
           <input type="text" id="minecraftName" name="minecraftName" required />
         </div>
+        <div class="form-group">
+          <label for="discordName">Discord Username</label>
+          <input type="text" id="discordName" name="discordName" required placeholder="username#1234" />
+        </div>
+        <div class="form-group">
+          <label for="reason">Why do you want to join Meridionalis?</label>
+          <textarea id="reason" name="reason" rows="4" required></textarea>
+        </div>
         <button type="submit">Register for Citizenship</button>
       </form>
+      <div id="formSuccess" class="hidden" style="color: green; font-weight: bold;">
+        Thank you for your application! We'll review it shortly.
+      </div>
     </section>
 
     <!-- News Section -->
-    <section id="news">
+    <section id="news" class="hidden">
       <h2>Latest News</h2>
       <article>
         <h3>Meridionalis Announces New Leadership</h3>
         <p>We have recently elected a new leader to guide our nation towards greater prosperity. Stay tuned for more updates!</p>
+        <p><small>Posted: June 15, 2025</small></p>
       </article>
       <article>
         <h3>Citizenship Applications Now Open</h3>
         <p>We are now accepting applications for citizenship. Join the growing community of Meridionalis!</p>
+        <p><small>Posted: June 1, 2025</small></p>
       </article>
+      <article>
+        <h3>New Capital Building Completed</h3>
+        <p>After weeks of construction, our new capital building is finally complete. All government meetings will now be held in this impressive structure.</p>
+        <p><small>Posted: May 20, 2025</small></p>
+      </article>
+    </section>
+
+    <!-- Constitution Section -->
+    <section id="constitution" class="hidden">
+      <h2>Constitution of Meridionalis</h2>
+      <p>Below is our nation's constitution. All citizens are expected to abide by these principles.</p>
+      <iframe src="constitution.pdf" class="pdf-viewer"></iframe>
+    </section>
+
+    <!-- Laws Section -->
+    <section id="laws" class="hidden">
+      <h2>National Laws</h2>
+      <p>The complete legal code of Meridionalis is available below:</p>
+      <iframe src="laws.pdf" class="pdf-viewer"></iframe>
+    </section>
+
+    <!-- Leaders Section -->
+    <section id="leaders" class="hidden">
+      <h2>National Leadership</h2>
+      
+      <div class="leader">
+        <img src="president.jpg" alt="President">
+        <div>
+          <h3>President John Doe</h3>
+          <p><strong>Position:</strong> Head of State and Government</p>
+          <p><strong>Term:</strong> 2025-2026</p>
+        </div>
+      </div>
+      
+      <div class="leader">
+        <img src="vice_president.jpg" alt="Vice President">
+        <div>
+          <h3>Vice President Jane Smith</h3>
+          <p><strong>Position:</strong> Second-in-command</p>
+          <p><strong>Term:</strong> 2025-2026</p>
+        </div>
+      </div>
+      
+      <div class="leader">
+        <img src="defense_minister.jpg" alt="Defense Minister">
+        <div>
+          <h3>General Alex Johnson</h3>
+          <p><strong>Position:</strong> Minister of Defense</p>
+          <p><strong>Term:</strong> 2025-2026</p>
+        </div>
+      </div>
+      
+      <div class="leader">
+        <img src="foreign_minister.jpg" alt="Foreign Minister">
+        <div>
+          <h3>Ambassador Sarah Williams</h3>
+          <p><strong>Position:</strong> Minister of Foreign Affairs</p>
+          <p><strong>Term:</strong> 2025-2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="hidden">
+      <h2>National Statistics</h2>
+      
+      <h3>Population</h3>
+      <p><strong>Current Population:</strong> 1 (Founder)</p>
+      <p><strong>Active Citizens:</strong> 1</p>
+      <p><strong>Pending Applications:</strong> 0</p>
+      
+      <h3>Alliances</h3>
+      <div class="alliance">
+        <img src="alliance1.png" alt="Alliance 1">
+        <div>
+          <p><strong>Northern Federation</strong> - Defensive Pact</p>
+        </div>
+      </div>
+      <div class="alliance">
+        <img src="alliance2.png" alt="Alliance 2">
+        <div>
+          <p><strong>Eastern Coalition</strong> - Trade Agreement</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="hidden">
+      <h2>National Territory</h2>
+      <p>Below is the current map of Meridionalis territory:</p>
+      <img src="map.png" alt="National Map" class="map-viewer">
+    </section>
+
+    <!-- Military Section -->
+    <section id="military" class="hidden">
+      <h2>Armed Forces of Meridionalis</h2>
+      
+      <div class="military-branch">
+        <h3>Army</h3>
+        <p>The ground forces of Meridionalis, responsible for territorial defense.</p>
+        <img src="army.jpg" alt="Army Forces">
+        
+        <h4>Ranks</h4>
+        <div class="rank">
+          <h5>Enlisted</h5>
+          <p>Private → Corporal → Sergeant</p>
+        </div>
+        <div class="rank">
+          <h5>Officers</h5>
+          <p>Lieutenant → Captain → Major → Colonel → General</p>
+        </div>
+      </div>
+      
+      <div class="military-branch">
+        <h3>Navy</h3>
+        <p>Our maritime defense force, protecting coastal waters.</p>
+        <img src="navy.jpg" alt="Navy Forces">
+        
+        <h4>Ranks</h4>
+        <div class="rank">
+          <h5>Enlisted</h5>
+          <p>Seaman → Petty Officer → Chief Petty Officer</p>
+        </div>
+        <div class="rank">
+          <h5>Officers</h5>
+          <p>Ensign → Lieutenant → Commander → Captain → Admiral</p>
+        </div>
+      </div>
+      
+      <div class="military-branch">
+        <h3>Air Force</h3>
+        <p>Aerial defense and reconnaissance units.</p>
+        <img src="airforce.jpg" alt="Air Force">
+        
+        <h4>Ranks</h4>
+        <div class="rank">
+          <h5>Enlisted</h5>
+          <p>Airman → Senior Airman → Sergeant</p>
+        </div>
+        <div class="rank">
+          <h5>Officers</h5>
+          <p>Second Lieutenant → First Lieutenant → Captain → Major → Colonel → General</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Government Section -->
+    <section id="government" class="hidden">
+      <h2>Government Structure</h2>
+      
+      <h3>Elections</h3>
+      <p>National elections are held every 6 months to select the President and Vice President. All citizens in good standing are eligible to vote.</p>
+      <p>The election process consists of:</p>
+      <ol>
+        <li>Nomination period (1 week)</li>
+        <li>Campaign period (2 weeks)</li>
+        <li>Voting day (24 hours)</li>
+        <li>Results announcement</li>
+      </ol>
+      
+      <h3>Voting System</h3>
+      <p>We use a ranked-choice voting system where citizens can rank candidates in order of preference. This ensures the winning candidate has majority support.</p>
+      
+      <h3>Legislative Process</h3>
+      <p>New laws can be proposed by any citizen. The process is as follows:</p>
+      <ol>
+        <li>Draft proposal submitted</li>
+        <li>Public discussion period (1 week)</li>
+        <li>Amendment phase</li>
+        <li>Final vote by all citizens</li>
+        <li>Presidential approval</li>
+      </ol>
+      
+      <h3>Executive Branch</h3>
+      <p>The President is responsible for:</p>
+      <ul>
+        <li>Implementing laws</li>
+        <li>Foreign relations</li>
+        <li>Military command</li>
+        <li>Appointing ministers</li>
+      </ul>
     </section>
   </main>
 
@@ -147,22 +352,119 @@
     // Dark mode toggle
     function toggleDarkMode() {
       document.body.classList.toggle("dark");
+      localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+    }
+
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark');
     }
 
     // Search box toggle
     function toggleSearch() {
       const input = document.getElementById("searchInput");
       input.style.display = input.style.display === "block" ? "none" : "block";
+      if (input.style.display === "block") {
+        input.focus();
+      }
     }
 
-    // Basic section search (scroll to matching section)
-    document.getElementById("searchInput").addEventListener("input", function() {
+    // Section management
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('main section').forEach(section => {
+        section.classList.add('hidden');
+        section.classList.remove('active-section');
+      });
+      
+      // Show selected section
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.classList.remove('hidden');
+        section.classList.add('active-section');
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      // Update URL
+      history.pushState(null, null, `#${sectionId}`);
+    }
+
+    // Check URL hash on load
+    window.addEventListener('load', function() {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        showSection(hash);
+      } else {
+        showSection('home');
+      }
+    });
+
+    // Handle back/forward navigation
+    window.addEventListener('popstate', function() {
+      const hash = window.location.hash.substring(1);
+      showSection(hash || 'home');
+    });
+
+    // Citizenship form submission
+    document.getElementById('citizenshipForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Replace with your actual Discord webhook URL
+      const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL';
+      
+      const formData = new FormData(this);
+      const data = {
+        content: '**New Citizenship Application**',
+        embeds: [{
+          title: 'Application Details',
+          fields: [
+            { name: 'Full Name', value: formData.get('name') },
+            { name: 'Age', value: formData.get('age') },
+            { name: 'Minecraft Username', value: formData.get('minecraftName') },
+            { name: 'Discord Username', value: formData.get('discordName') },
+            { name: 'Reason for Joining', value: formData.get('reason') }
+          ],
+          timestamp: new Date().toISOString()
+        }]
+      };
+      
+      // Send to Discord webhook
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          // Show success message
+          document.getElementById('formSuccess').classList.remove('hidden');
+          document.getElementById('citizenshipForm').reset();
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            document.getElementById('formSuccess').classList.add('hidden');
+          }, 5000);
+        } else {
+          alert('Error submitting form. Please try again or contact us on Discord.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error submitting form. Please try again or contact us on Discord.');
+      });
+    });
+
+    // Basic section search
+    document.getElementById('searchInput').addEventListener('input', function() {
       const query = this.value.toLowerCase();
       const sections = document.querySelectorAll("main section");
+      
       for (const sec of sections) {
-        const id = sec.id || "";
-        if (id.toLowerCase().includes(query)) {
-          sec.scrollIntoView({ behavior: "smooth" });
+        const title = sec.querySelector('h2')?.textContent.toLowerCase() || '';
+        if (title.includes(query)) {
+          showSection(sec.id);
           break;
         }
       }
